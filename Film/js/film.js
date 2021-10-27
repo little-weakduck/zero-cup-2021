@@ -59,47 +59,19 @@
 			}
 		},
 		setScale: function() {
-			// 堆叠式
-			if (this.gap < 0) {
-
-				for (let i = 0; i < this.imgDoms.length; i++) {
-					if (this.imgArr.length ===2) {
-						this.imgDoms[0].style.left = `${(this.containerWidth/4) - (this.imgWidth/2)}vw`;
-						this.imgDoms[1].style.left = `${(this.containerWidth/4)*3 - (this.imgWidth/2)}vw`;
-					} else if (this.imgArr.length ===1) {
-						this.imgDoms[i].style.left = `${(this.containerWidth/2) - (this.imgWidth/2)}vw`;
-					} else {
-						this.imgDoms[i].style.left = `${(i - 1) * (this.imgWidth + this.gap)}vw`;
-					}
-
-
-					if (i === this.nowIndex) {
-						this.imgDoms[i].style.transform = 'scale(1)';
-						this.imgDoms[i].style.zIndex = '1001';
-					} else if (i < this.nowIndex) {
-						this.imgDoms[i].style.transform = `scale(${1 - ((this.nowIndex - i) * 0.2)})`;
-						this.imgDoms[i].style.zIndex = 1000 - ((this.nowIndex - i));
-					} else if (i > this.nowIndex) {
-						this.imgDoms[i].style.transform = `scale(${1 - ((i - this.nowIndex) * 0.2)})`;
-						this.imgDoms[i].style.zIndex = 1000 - (i - this.nowIndex);
-					}
+			for (let i = 0; i < this.imgDoms.length; i++) {
+				if (this.imgArr.length ===2) {
+					this.imgDoms[0].style.left = `${(this.containerWidth/4) - (this.imgWidth/2)}vw`;
+					this.imgDoms[1].style.left = `${(this.containerWidth/4)*3 - (this.imgWidth/2)}vw`;
+				} else if (this.imgArr.length ===1) {
+					this.imgDoms[i].style.left = `${(this.containerWidth/2) - (this.imgWidth/2)}vw`;
+				} else {
+					this.imgDoms[i].style.left = `${(i - 1) * (this.imgWidth + this.gap)}vw`;
 				}
-			} else {
-			// 卡片式
-				for (let i = 0; i < this.imgDoms.length; i++) {
-					if (this.imgArr.length ===2) {
-						this.imgDoms[0].style.left = `${(this.containerWidth/4) - (this.imgWidth/2)}vw`;
-						this.imgDoms[1].style.left = `${(this.containerWidth/4)*3 - (this.imgWidth/2)}vw`;
-					} else if (this.imgArr.length ===1) {
-						this.imgDoms[i].style.left = `${(this.containerWidth/2) - (this.imgWidth/2)}vw`;
-					} else {
-						this.imgDoms[i].style.left = `${(i - 1) * (this.imgWidth + this.gap)}vw`;
-					}
-					if (i === this.nowIndex) {
-						this.imgDoms[i].style.transform = 'scale(1)';
-					} else {
-						this.imgDoms[i].style.transform = `scale(${this.scale})`;
-					}
+				if (i === this.nowIndex) {
+					this.imgDoms[i].style.transform = 'scale(1)';
+				} else {
+					this.imgDoms[i].style.transform = `scale(${this.scale})`;
 				}
 			}
 		},
