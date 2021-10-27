@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Camera</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.itxst.com/package/vue/vue.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+
+<body>
+    <div style="width: 620px; margin: 40px auto 0 auto;">
+        <div class="img">
+            <div class="inner">
+                <div>
+                    <img src="image/1-1.jpg" /></div>
+                <div>
+                    <img src="image/1-2.jpg" /></div>
+            </div>
+        </div>
+        <div class="img">
+            <div class="inner">
+                <div>
+                    <img src="image/2-1.jpg" /></div>
+                <div>
+                    <img src="image/2-2.jpg" /></div>
+            </div>
+        </div>
+        <div class="img">
+            <div class="inner">
+                <div>
+                    <img src="image/3-1.jpg" /></div>
+                <div>
+                    <img src="image/3-2.jpg" /></div>
+            </div>
+        </div>
+        <div class="img">
+            <div class="inner">
+                <div>
+                    <img src="image/4-1.jpg" /></div>
+                <div>
+                    <img src="image/4-2.jpg" /></div>
+            </div>
+        </div>
+        <div class="img">
+            <div class="inner">
+                <div>
+                    <img src="image/1-1.jpg" /></div>
+                <div>
+                    <img src="image/1-2.jpg" /></div>
+            </div>
+        </div>
+        <div class="img">
+            <div class="inner">
+                <div>
+                    <img src="image/2-1.jpg" /></div>
+                <div>
+                    <img src="image/2-2.jpg" /></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(".img").mouseenter(function() {
+            var $this = $(this);
+            var $div = $this.find(".inner div");
+            $div.eq(1).stop();
+            $div.eq(1).css({
+                "top": "0px",
+                "left": "0px",
+                "width": "200px",
+                "height": "200px"
+            });
+            $div.eq(0).stop().animate({
+                "top": "-25px",
+                "left": "-25px",
+                "width": "250px",
+                "height": "250px",
+                "opacity": "0"
+            }, 500);
+            $div.eq(1).stop().animate({
+                "top": "-25px",
+                "left": "-25px",
+                "width": "250px",
+                "height": "250px",
+                "opacity": "1"
+            }, 500);
+        }).mouseleave(function() {
+            var $this = $(this);
+            var $div = $this.find(".inner div");
+            $div.eq(0).stop().animate({
+                "top": "0",
+                "left": "0",
+                "width": "200px",
+                "height": "200px",
+                "opacity": "1"
+            }, 500);
+            $div.eq(1).stop().animate({
+                "top": "0",
+                "left": "0",
+                "width": "200px",
+                "height": "200px",
+                "opacity": "0"
+            }, 500);
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
