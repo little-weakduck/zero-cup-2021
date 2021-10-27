@@ -9,6 +9,7 @@
     height: 98vh;
     background-color:greenyellow;
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -30,7 +31,7 @@
 #q{
     width: 25vw;
     height: 40vh;
-    padding: 20px;
+    padding: 1vh;
     display: -webkit-flex;
     display: flex;
     justify-content: center;
