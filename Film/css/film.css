@@ -1,21 +1,21 @@
 @font-face{
-    font-family: 'history';  /*需要导入的字体名*/
-    src: url("../css/historytitle.ttf");  /*字体所在路径*/
+    font-family: 'film';  /*需要导入的字体名*/
+    src: url("../css/filmtitle.ttf");  /*字体所在路径*/
     font-weight: normal;
     font-style: normal;
 }
 
-#historyDiv{
+#filmDiv{
     height: 98vh;
     background-color:white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-#historyTitle{
+#filmTitle{
     text-align: center;
     padding-top: 5vh;
-    font-family: "history";
+    font-family: "film";
     font-size: 10vh;
 }
 .swiper-list{
