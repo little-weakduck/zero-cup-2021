@@ -1,0 +1,42 @@
+@font-face{
+    font-family: 'people';  
+    src: url("../css/peopleTitle.TTF"); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+#peopleDiv{
+    height: 98vh;
+    background-color:greenyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#peopleTitle{
+    font-family: people;
+    text-align: center;
+    font-size: 6vh;
+}
+
+#peopleMain{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#q{
+    width: 25vw;
+    height: 40vh;
+    padding: 20px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.peoplePic{
+    height: 30vh;
+}
