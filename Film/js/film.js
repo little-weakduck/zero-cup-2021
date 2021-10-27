@@ -9,33 +9,33 @@
 	* autoplay 是否自动播放
 	* gap 图片之间间隔
 	*/
-	function Swiper(obj) {
+	function mainboard(obj) {
 		this.imgArr = obj.imgArr || [];
 		this.scale = obj.scale || 0.8; // 图片缩放值
-		this.gap = obj.gap; // 图片未缩放状态下图片之间的间隔
+		this.gap = obj.gap;
 
-		this.containerWidth = 98; // 轮播图盒子宽度
+		this.containerWidth = 98; 
 		
-		this.imgWidth = obj.imgWidth; // 图片宽度
+		this.imgWidth = obj.imgWidth; 
 		this.aniTime = obj.aniTime || 500;
 		this.intervalTime = this.aniTime + obj.intervalTime || 2000;
 		this.nowIndex = 3;
-		this.imgDoms = document.getElementsByClassName('swiper-slide' + obj.clsSuffix);
-		this.mainDom = document.getElementsByClassName('swiper-main' + obj.clsSuffix)[0];
-		this.listDoms = document.getElementsByClassName('swiper-list' + obj.clsSuffix)[0];
+		this.imgDoms = document.getElementsByClassName('mainboard-slide' + obj.clsSuffix);
+		this.mainDom = document.getElementsByClassName('mainboard-main' + obj.clsSuffix)[0];
+		this.listDoms = document.getElementsByClassName('mainboard-list' + obj.clsSuffix)[0];
 		this.activeDom = this.imgDoms[0];
 		this.autoplay = obj.autoplay;
 
 		this.listDoms.style.width = `${this.containerWidth}vw`;
-
-		this.timer; // 自动播放的定时器
+		//定时器
+		this.timer;
 		this.prev = Date.now();
 
 		this.diffLen = (this.containerWidth - this.imgWidth - (this.gap * 2)) / 2;
   		this.clsSuffix = obj.clsSuffix
 	}
  
-	Swiper.prototype = {
+	mainboard.prototype = {
 		init: function() {
 			this.eventBind();
 
@@ -50,7 +50,7 @@
 			}
 			let str = '';
 			resImgArr.forEach((item, index) => {
-				str += `<a href="${resImgArr[index].url}"><img class="swiper-slide${this.clsSuffix}" style="width: ${this.imgWidth}vw;" src="${resImgArr[index].imgPath}" /></a>`;
+				str += `<a href="${resImgArr[index].url}"><img class="mainboard-slide${this.clsSuffix}" style="width: ${this.imgWidth}vw;" src="${resImgArr[index].imgPath}" /></a>`;
 			});
 			this.mainDom.innerHTML = str;
 			this.setScale();
@@ -164,9 +164,9 @@
 				}
 				let angle = that.angle({ X: that.startX, Y: that.startY }, { X: that.endX, Y: that.endY });
 				if (Math.abs(angle) > 30) return;
-			    if (that.endX > that.startX){ // 右滑
+			    if (that.endX > that.startX){ 
 			    	that.prevSlider(that.aniTime);
-			    } else { // 左滑
+			    } else { 
 			    	that.nextSlider(that.aniTime);
 			    }
 				that.timer = setInterval(that.nextSlider.bind(that, that.aniTime), that.intervalTime);
@@ -181,17 +181,7 @@
                 this.prev = Date.now();
             }
 		},
-		// /**
-		// * 计算滑动角度
-		// * @param {Object} start 起点坐标
-		// * @param {Object} end 终点坐标
-		// */
-		// angle: function (start, end) {
-		//     var _X = end.X - start.X,
-		//       _Y = end.Y - start.Y
-		//     //返回角度 /Math.atan()返回数字的反正切值
-		//     return 360 * Math.atan(_Y / _X) / (2 * Math.PI);
-		// }
+		
 	}
 
     let imgArr = [{
@@ -216,13 +206,13 @@
     }
 ];
 
-new Swiper({
+new mainboard({
     imgArr: imgArr, 
     imgWidth: 52, 
     aniTime: 1000, 
-    intervalTime: 1500, 
+    intervalTime: 3500, 
     scale: 0.8, 
-    autoplay: false,
+    autoplay: true,
     gap: 0,
       clsSuffix: '-card'
 }).init();

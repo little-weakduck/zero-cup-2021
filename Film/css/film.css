@@ -18,17 +18,17 @@
     font-family: "film";
     font-size: 10vh;
 }
-.swiper-list{
+.mainboard-list{
         height: 90vh;
         position: relative;
         overflow: hidden;
         padding: 30px 0;
     }
-    .swiper-main{
+    .mainboard-main{
         height: 100%;
         position: relative;
     }
-    .swiper-main img{
+    .mainboard-main img{
         height: 100%;
         display: block;
         position: absolute;
