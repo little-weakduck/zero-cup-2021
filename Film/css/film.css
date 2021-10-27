@@ -1,6 +1,6 @@
 @font-face{
-    font-family: 'film';  /*需要导入的字体名*/
-    src: url("../css/filmtitle.ttf");  /*字体所在路径*/
+    font-family: 'film';  
+    src: url("../css/filmtitle.ttf"); 
     font-weight: normal;
     font-style: normal;
 }

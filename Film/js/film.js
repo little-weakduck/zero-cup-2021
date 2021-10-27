@@ -1,7 +1,7 @@
 
 	/**
 	* obj: 
-	* imgArr 图片数组
+	* filmArr 图片数组
 	* imgWidth 图片宽度
 	* aniTime 动画切换时间
 	* intervalTime 停留的时间
@@ -10,7 +10,7 @@
 	* gap 图片之间间隔
 	*/
 	function mainboard(obj) {
-		this.imgArr = obj.imgArr || [];
+		this.filmArr = obj.filmArr || [];
 		this.scale = obj.scale || 0.8; // 图片缩放值
 		this.gap = obj.gap;
 
@@ -39,18 +39,18 @@
 		init: function() {
 			this.eventBind();
 
-			let resImgArr;
-			if (this.imgArr.length >2) {
-				resImgArr = [this.imgArr[this.imgArr.length-2], this.imgArr[this.imgArr.length-1], ...this.imgArr, this.imgArr[0], this.imgArr[1]];
+			let resfilmArr;
+			if (this.filmArr.length >2) {
+				resfilmArr = [this.filmArr[this.filmArr.length-2], this.filmArr[this.filmArr.length-1], ...this.filmArr, this.filmArr[0], this.filmArr[1]];
 				this.mainDom.style.left = `${-(2 * this.imgWidth + this.gap - this.diffLen)}vw`;
-				this.mainDom.style.width = `${(this.imgArr.length+2) * (this.imgWidth + (this.gap / 2))}vw`;
+				this.mainDom.style.width = `${(this.filmArr.length+2) * (this.imgWidth + (this.gap / 2))}vw`;
 			} else {
 				this.nowIndex = 0;
-				resImgArr = [...this.imgArr];
+				resfilmArr = [...this.filmArr];
 			}
 			let str = '';
-			resImgArr.forEach((item, index) => {
-				str += `<a href="${resImgArr[index].url}"><img class="mainboard-slide${this.clsSuffix}" style="width: ${this.imgWidth}vw;" src="${resImgArr[index].imgPath}" /></a>`;
+			resfilmArr.forEach((item, index) => {
+				str += `<a href="${resfilmArr[index].url}"><img class="mainboard-slide${this.clsSuffix}" style="width: ${this.imgWidth}vw;" src="${resfilmArr[index].imgPath}" /></a>`;
 			});
 			this.mainDom.innerHTML = str;
 			this.setScale();
@@ -60,10 +60,10 @@
 		},
 		setScale: function() {
 			for (let i = 0; i < this.imgDoms.length; i++) {
-				if (this.imgArr.length ===2) {
+				if (this.filmArr.length ===2) {
 					this.imgDoms[0].style.left = `${(this.containerWidth/4) - (this.imgWidth/2)}vw`;
 					this.imgDoms[1].style.left = `${(this.containerWidth/4)*3 - (this.imgWidth/2)}vw`;
-				} else if (this.imgArr.length ===1) {
+				} else if (this.filmArr.length ===1) {
 					this.imgDoms[i].style.left = `${(this.containerWidth/2) - (this.imgWidth/2)}vw`;
 				} else {
 					this.imgDoms[i].style.left = `${(i - 1) * (this.imgWidth + this.gap)}vw`;
@@ -76,10 +76,10 @@
 			}
 		},
 		prevSlider: function(aniTime) {
-			if (this.imgArr.length ===2) {
+			if (this.filmArr.length ===2) {
 				this.nowIndex = this.nowIndex ? 0 : 1;
 				this.setScale()
-			} else if (this.imgArr.length ===1) {
+			} else if (this.filmArr.length ===1) {
 				return;
 			} else {
 				this.nowIndex--;
@@ -88,7 +88,7 @@
 				if (this.nowIndex === 1) {
 					this.setScale()
 					setTimeout(function() {
-						this.nowIndex = (this.imgArr.length+1);
+						this.nowIndex = (this.filmArr.length+1);
 						this.setScale()
 						this.mainDom.style.transitionProperty = 'none';
 						this.mainDom.style.left = `${-(parseInt(this.imgDoms[this.nowIndex].style.left) - this.diffLen - this.gap)}vw`;
@@ -99,18 +99,18 @@
 			}
 		},
 		nextSlider: function(aniTime) {
-			if (this.imgArr.length ===2) {
+			if (this.filmArr.length ===2) {
 				this.nowIndex = this.nowIndex ? 0 : 1;
 				this.setScale()
-			} else if (this.imgArr.length ===1) {
+			} else if (this.filmArr.length ===1) {
 				return;
 			} else {
 				if (this.nowIndex >=2) {	
 					this.mainDom.style.transition = `left ${aniTime/1000}s`
 					this.mainDom.style.left = `${parseInt(this.mainDom.style.left)-(this.gap + this.imgWidth)}vw`;
 				}
-				if (this.nowIndex === (this.imgArr.length+1)) {
-					this.nowIndex = (this.imgArr.length+2);
+				if (this.nowIndex === (this.filmArr.length+1)) {
+					this.nowIndex = (this.filmArr.length+2);
 					this.setScale()
 					setTimeout(function() {
 						this.nowIndex = 2;
@@ -184,13 +184,13 @@
 		
 	}
 
-    let imgArr = [{
+    let filmArr = [{
         url: '#',
         imgPath: 'css/i.jpg'
     },
     {
-        url: '#',
-        imgPath: 'css/o.jpg'
+        url: 'https:\\www.baidu.com',
+        imgPath: 'css/toyStory.jpeg'
     },
     {
         url: '#',
@@ -203,11 +203,12 @@
     {
         url: '#',
         imgPath: 'css/z.png'
-    }
+    },
+	
 ];
 
 new mainboard({
-    imgArr: imgArr, 
+    filmArr: filmArr, 
     imgWidth: 52, 
     aniTime: 1000, 
     intervalTime: 3500, 
