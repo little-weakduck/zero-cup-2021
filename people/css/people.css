@@ -41,3 +41,20 @@
 #peoplePic{
     height: 30vh;
 }
+
+#peopleDescribe{
+    display: none;
+    height: 70vh;
+    width: 80vw;
+    background-color: rgb(139, 138, 138);
+    position: fixed;
+    left: 10vw;
+    bottom: 13vh;
+    border-radius: 10px;
+}
+
+.close{
+    padding-left: 3px;
+    padding-top: 3px;
+    
+}
