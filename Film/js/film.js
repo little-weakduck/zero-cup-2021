@@ -186,23 +186,23 @@
 
     let filmArr = [{
         url: '#',
-        imgPath: 'css/i.jpg'
+        imgPath: 'film/css/i.jpg'
     },
     {
         url: 'https:\\www.baidu.com',
-        imgPath: 'css/toyStory.jpeg'
+        imgPath: 'film/css/toyStory.jpeg'
     },
     {
         url: '#',
-        imgPath: 'css/q.jpeg'
+        imgPath: 'film/css/q.jpeg'
     },
     {
         url: '#',
-        imgPath: 'css/w.jpg'
+        imgPath: 'film/css/w.jpg'
     },
     {
         url: '#',
-        imgPath: 'css/z.png'
+        imgPath: 'film/css/z.png'
     },
 	
 ];

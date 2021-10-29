@@ -1,13 +1,38 @@
+
+/* 添加字体 */
+
 @font-face{
-    font-family: 'people';  
-    src: url("../css/peopleTitle.TTF"); 
+    font-family: 'peopleTitle';  
+    src: url("peopleTitle.TTF"); 
     font-weight: normal;
     font-style: normal;
+}
+@font-face{
+    font-family: 'peopleFilm';  
+    src: url("peopleFilm.TTF"); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'peopleCa';  
+    src: url("peopleCa.TTF"); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'peopleIn';  
+    src: url("peopleIn.ttc"); 
+    font-weight: normal;
+    font-style: normal;
+}
+/*缩紧两格 */
+p{
+    text-indent: 2em;
 }
 
 #peopleDiv{
     height: 98vh;
-    background-color:greenyellow;
+    background-color:whitesmoke;
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
@@ -15,7 +40,7 @@
 }
 
 #peopleTitle{
-    font-family: people;
+    font-family: peopleTitle;
     text-align: center;
     font-size: 6vh;
 }
@@ -51,10 +76,21 @@
     left: 10vw;
     bottom: 13vh;
     border-radius: 10px;
+    padding: 20px;
+    opacity: 96%;
 }
 
-.close{
-    padding-left: 3px;
-    padding-top: 3px;
-    
+
+#peopleFilm{
+    text-align: center;
+    font-family: peopleFilm;
+}
+
+#peopleCa{
+    text-align: center;
+    font-family: peopleCa;
+}
+
+#peopleIn{
+    font-family: peopleIn;
 }
