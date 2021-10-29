@@ -1,17 +1,16 @@
 
-	/**
-	* obj: 
-	* filmArr 图片数组
-	* imgWidth 图片宽度
-	* aniTime 动画切换时间
-	* intervalTime 停留的时间
-	* scale 图片缩放
-	* autoplay 是否自动播放
-	* gap 图片之间间隔
-	*/
+	// 轮播图 
+	// filmArr 图片数组
+	// imgWidth 图片宽度
+	// aniTime 动画切换时间
+	// intervalTime 停留的时间
+	// scale 图片缩放
+ 	// autoplay 是否自动播放
+	// gap 图片之间间隔
+	
 	function mainboard(obj) {
 		this.filmArr = obj.filmArr || [];
-		this.scale = obj.scale || 0.8; // 图片缩放值
+		this.scale = obj.scale || 0.8; 
 		this.gap = obj.gap;
 
 		this.containerWidth = 98; 
@@ -27,7 +26,6 @@
 		this.autoplay = obj.autoplay;
 
 		this.listDoms.style.width = `${this.containerWidth}vw`;
-		//定时器
 		this.timer;
 		this.prev = Date.now();
 
@@ -189,8 +187,8 @@
         imgPath: 'film/css/i.jpg'
     },
     {
-        url: 'https:\\www.baidu.com',
-        imgPath: 'film/css/toyStory.jpeg'
+        imgPath: 'film/css/toyStory.jpeg',
+		url:`javascript:toyStoryVideoPlay()` ,
     },
     {
         url: '#',
@@ -217,3 +215,24 @@ new mainboard({
     gap: 0,
       clsSuffix: '-card'
 }).init();
+
+//视频点击播放
+function toyStoryVideoPlay()
+{
+	$(".toyStoryVi").show();
+	toyStoryVideo.play();
+}
+
+//隐藏视频
+$(document).ready(function() {
+    $(".filmClose").click(function() {
+        $(".toyStoryVi").hide();
+		toyStoryVideo.pause()
+        $(".monsterDe").hide("slow");
+        $(".seaDe").hide("slow");
+        $(".carDe").hide("slow");
+        $(".cocoDe").hide("slow");
+        $(".IncrediblesDe").hide("slow");
+        
+    });
+});
