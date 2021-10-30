@@ -183,24 +183,32 @@
 	}
 
     let filmArr = [{
-        url: '#',
+        url: 'javascript:monsterVideoPlay()',
         imgPath: 'film/css/i.jpg'
     },
     {
         imgPath: 'film/css/toyStory.jpeg',
-		url:`javascript:toyStoryVideoPlay()` ,
+		url:'javascript:toyStoryVideoPlay()' ,
     },
     {
-        url: '#',
+        url: 'javascript:carVideoPlay()',
         imgPath: 'film/css/q.jpeg'
     },
     {
-        url: '#',
+        url: 'javascript:seaVideoPlay()',
         imgPath: 'film/css/w.jpg'
     },
     {
-        url: '#',
+        url: 'javascript:incredibleVideoPlay()',
         imgPath: 'film/css/z.png'
+    },
+	{
+        url: 'javascript:soulVideoPlay()',
+        imgPath: 'film/css/w.jpg'
+    },
+	{
+        url: 'javascript:cocoVideoPlay()',
+        imgPath: 'film/css/w.jpg'
     },
 	
 ];
@@ -222,17 +230,53 @@ function toyStoryVideoPlay()
 	$(".toyStoryVi").show();
 	toyStoryVideo.play();
 }
+function monsterVideoPlay()
+{
+	$(".monsterVi").show();
+	monsterVideo.play();
+}
+function carVideoPlay()
+{
+	$(".carVi").show();
+	carVideo.play();
+}
+function seaVideoPlay()
+{
+	$(".seaVi").show();
+	seaVideo.play();
+}
+function incredibleVideoPlay()
+{
+	$(".incredibleVi").show();
+	incredibleVideo.play();
+}
+function cocoVideoPlay()
+{
+	$(".cocoVi").show();
+	cocoVideo.play();
+}
+function soulVideoPlay()
+{
+	$(".soulVi").show();
+	soulVideo.play();
+}
 
 //隐藏视频
 $(document).ready(function() {
     $(".filmClose").click(function() {
         $(".toyStoryVi").hide();
 		toyStoryVideo.pause()
-        $(".monsterDe").hide("slow");
-        $(".seaDe").hide("slow");
-        $(".carDe").hide("slow");
-        $(".cocoDe").hide("slow");
-        $(".IncrediblesDe").hide("slow");
-        
+        $(".monsterVi").hide();
+		monsterVideo.pause();
+        $(".carVi").hide();
+		carVideo.pause();
+        $(".seaVi").hide();
+		seaVideo.pause();
+        $(".incredibleVi").hide();
+		incredibleVideo.pause();
+        $(".soulVi").hide();
+		soulVideo.pause();
+		$(".cocoVi").hide();
+		cocoVideo.pause();      
     });
 });
