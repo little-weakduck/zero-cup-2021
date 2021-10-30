@@ -184,31 +184,31 @@
 
     let filmArr = [{
         url: 'javascript:monsterVideoPlay()',
-        imgPath: 'film/css/i.jpg'
+        imgPath: './css/i.jpg'
     },
     {
-        imgPath: 'film/css/toyStory.jpeg',
+        imgPath: './css/toyStory.jpeg',
 		url:'javascript:toyStoryVideoPlay()' ,
     },
     {
         url: 'javascript:carVideoPlay()',
-        imgPath: 'film/css/q.jpeg'
+        imgPath: './css/q.jpeg'
     },
     {
         url: 'javascript:seaVideoPlay()',
-        imgPath: 'film/css/w.jpg'
+        imgPath: './css/w.jpg'
     },
     {
         url: 'javascript:incredibleVideoPlay()',
-        imgPath: 'film/css/z.png'
+        imgPath: './css/z.png'
     },
 	{
         url: 'javascript:soulVideoPlay()',
-        imgPath: 'film/css/w.jpg'
+        imgPath: './css/w.jpg'
     },
 	{
         url: 'javascript:cocoVideoPlay()',
-        imgPath: 'film/css/w.jpg'
+        imgPath: './css/w.jpg'
     },
 	
 ];

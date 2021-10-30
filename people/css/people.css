@@ -31,7 +31,7 @@ p{
 }
 
 #peopleDiv{
-    height: 98vh;
+    height: 100vh;
     background-color:whitesmoke;
     display: flex;
     display: -webkit-flex;
