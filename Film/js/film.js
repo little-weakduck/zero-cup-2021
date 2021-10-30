@@ -1,17 +1,16 @@
 
-	/**
-	* obj: 
-	* filmArr 图片数组
-	* imgWidth 图片宽度
-	* aniTime 动画切换时间
-	* intervalTime 停留的时间
-	* scale 图片缩放
-	* autoplay 是否自动播放
-	* gap 图片之间间隔
-	*/
+	// 轮播图 
+	// filmArr 图片数组
+	// imgWidth 图片宽度
+	// aniTime 动画切换时间
+	// intervalTime 停留的时间
+	// scale 图片缩放
+ 	// autoplay 是否自动播放
+	// gap 图片之间间隔
+	
 	function mainboard(obj) {
 		this.filmArr = obj.filmArr || [];
-		this.scale = obj.scale || 0.8; // 图片缩放值
+		this.scale = obj.scale || 0.8; 
 		this.gap = obj.gap;
 
 		this.containerWidth = 98; 
@@ -27,7 +26,6 @@
 		this.autoplay = obj.autoplay;
 
 		this.listDoms.style.width = `${this.containerWidth}vw`;
-		//定时器
 		this.timer;
 		this.prev = Date.now();
 
@@ -185,24 +183,32 @@
 	}
 
     let filmArr = [{
-        url: '#',
+        url: 'javascript:monsterVideoPlay()',
         imgPath: 'film/css/i.jpg'
     },
     {
-        url: 'https:\\www.baidu.com',
-        imgPath: 'film/css/toyStory.jpeg'
+        imgPath: 'film/css/toyStory.jpeg',
+		url:'javascript:toyStoryVideoPlay()' ,
     },
     {
-        url: '#',
+        url: 'javascript:carVideoPlay()',
         imgPath: 'film/css/q.jpeg'
     },
     {
-        url: '#',
+        url: 'javascript:seaVideoPlay()',
         imgPath: 'film/css/w.jpg'
     },
     {
-        url: '#',
+        url: 'javascript:incredibleVideoPlay()',
         imgPath: 'film/css/z.png'
+    },
+	{
+        url: 'javascript:soulVideoPlay()',
+        imgPath: 'film/css/w.jpg'
+    },
+	{
+        url: 'javascript:cocoVideoPlay()',
+        imgPath: 'film/css/w.jpg'
     },
 	
 ];
@@ -217,3 +223,60 @@ new mainboard({
     gap: 0,
       clsSuffix: '-card'
 }).init();
+
+//视频点击播放
+function toyStoryVideoPlay()
+{
+	$(".toyStoryVi").show();
+	toyStoryVideo.play();
+}
+function monsterVideoPlay()
+{
+	$(".monsterVi").show();
+	monsterVideo.play();
+}
+function carVideoPlay()
+{
+	$(".carVi").show();
+	carVideo.play();
+}
+function seaVideoPlay()
+{
+	$(".seaVi").show();
+	seaVideo.play();
+}
+function incredibleVideoPlay()
+{
+	$(".incredibleVi").show();
+	incredibleVideo.play();
+}
+function cocoVideoPlay()
+{
+	$(".cocoVi").show();
+	cocoVideo.play();
+}
+function soulVideoPlay()
+{
+	$(".soulVi").show();
+	soulVideo.play();
+}
+
+//隐藏视频
+$(document).ready(function() {
+    $(".filmClose").click(function() {
+        $(".toyStoryVi").hide();
+		toyStoryVideo.pause()
+        $(".monsterVi").hide();
+		monsterVideo.pause();
+        $(".carVi").hide();
+		carVideo.pause();
+        $(".seaVi").hide();
+		seaVideo.pause();
+        $(".incredibleVi").hide();
+		incredibleVideo.pause();
+        $(".soulVi").hide();
+		soulVideo.pause();
+		$(".cocoVi").hide();
+		cocoVideo.pause();      
+    });
+});

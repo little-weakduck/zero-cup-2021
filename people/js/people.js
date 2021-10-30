@@ -63,7 +63,7 @@ $(document).ready(function() {
 });
 //隐藏人物介绍
 $(document).ready(function() {
-    $(".close").click(function() {
+    $(".peopleClose").click(function() {
         $(".toyDe").hide("slow");
         $(".monsterDe").hide("slow");
         $(".seaDe").hide("slow");
