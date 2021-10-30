@@ -1,4 +1,4 @@
-function FirstPage(){
+
   window.addEventListener('scroll', (e) => {
     let scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight)
   
@@ -52,4 +52,3 @@ function FirstPage(){
       $TextBg.style.opacity = 0
       $title.style.width = document.documentElement.clientWidth * (1 - scrolled) *(1 - scrolled) * 30 + 'px';
     }})
-}
