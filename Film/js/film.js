@@ -188,6 +188,7 @@
     },
     {
         imgPath: './css/toyStory.jpeg',
+		
 		url:'javascript:toyStoryVideoPlay()' ,
     },
     {
