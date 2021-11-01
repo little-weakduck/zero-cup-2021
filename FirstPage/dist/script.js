@@ -4,14 +4,11 @@
   
     let $h1 = document.querySelector('h1')
     let $title = document.querySelector('#title')
-    let $PIXAR = document.querySelector('#PIXAR')
     let $TextBg = document.querySelector('#text-bg')
     let $video = document.querySelector('#video')
   
     $title.style.opacity = 0
-    $PIXAR.style.opacity = 0
     $TextBg.style.opacity = 0
-  
   
     //h1逐渐消失
     if (scrolled <= 0.1) {
@@ -20,6 +17,7 @@
     } else {
       $h1.style.opacity = 0
     }
+
     //video逐渐变大
     if (scrolled <= 0.1) {
       $('#video').fadeOut(1)
@@ -29,6 +27,7 @@
     } else if (scrolled >= 0.5) {
       $('#video').fadeIn(500)
       $('#title').css('display', 'block')
+      $('#text-bg').css('display', 'block')
       $video.style.height = '100%';
     }
     else {
@@ -39,16 +38,15 @@
     //标题由大至小
     if (scrolled <= 0.5) {
       $title.style.opacity = 0
-      $title.classList.add('transparent')
+      $TextBg.style.opacity = 0
     } else if (scrolled >= 0.7) {
       $title.style.opacity = 1
-      $PIXAR.style.opacity = 1
-      $TextBg.style.opacity = 1
+      $TextBg.style.opacity = scrolled
       $title.style.width = document.documentElement.clientWidth * (1 - scrolled) *(1 - scrolled) *30 + 'px';
+      $TextBg.style.width = document.documentElement.clientWidth * (1 - scrolled) *(1 - scrolled) *30 + 'px';
     } else {
-      $('#PIXAR').fadeIn(200)
       $title.style.opacity = 1
-      $PIXAR.style.opacity = 1
-      $TextBg.style.opacity = 0
+      $('#text-bg').fadeIn(200)
       $title.style.width = document.documentElement.clientWidth * (1 - scrolled) *(1 - scrolled) * 30 + 'px';
+      $TextBg.style.width = document.documentElement.clientWidth * (1 - scrolled) *(1 - scrolled) *30 + 'px';
     }})
