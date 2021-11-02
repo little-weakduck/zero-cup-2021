@@ -1,5 +1,6 @@
 body {
-  background-color: black;
+  background-color: rgb(156,164,216);
+  overflow-x: hidden;
 }
 
 iframe::-webkit-scrollbar {

@@ -6,7 +6,7 @@
     let $title = document.querySelector('#title')
     let $TextBg = document.querySelector('#text-bg')
     let $video = document.querySelector('#video')
-  
+
     $title.style.opacity = 0
     $TextBg.style.opacity = 0
   

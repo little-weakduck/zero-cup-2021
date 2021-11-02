@@ -1,5 +1,9 @@
-/* 添加字体 */
+body {
+  margin: 0;
+}
 
+
+/* 添加字体 */
 @font-face {
   font-family: "peopleTitle";
   src: url("peopleTitle.TTF");
