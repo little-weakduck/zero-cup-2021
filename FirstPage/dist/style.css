@@ -1,9 +1,8 @@
 body {
   margin: 0;
 }
-#FirstPage{
-  height: 3000px;
-
+#FirstPage {
+  height: 14000px;
 }
 
 #beginning-section {
@@ -22,9 +21,9 @@ video {
   display: none;
 }
 
-#title-section{
+#title-section {
   width: 100%;
-  height:100%
+  height: 100%;
 }
 
 #title {
@@ -34,24 +33,23 @@ video {
   transform: translate(-50%, -50%);
   z-index: 10;
   min-width: 1000px;
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   display: none;
-  margin:0
+  margin: 0;
 }
 
-
-#text-bg{
+#text-bg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
   min-width: 990px;
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   display: none;
-  margin:0
+  margin: 0;
 }
 
 #beginning-section h1 {

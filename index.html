@@ -5,23 +5,31 @@
     <meta charset="UTF-8">
     <title>people</title>
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="people/css/people.css">
+    <link rel="stylesheet" href="./FirstPage/dist/style.css">
     <script src="https://www.itxst.com/package/vue/vue.min.js"></script>
     <script src="FirstPage/dist/jquery-3.6.0.js"></script>
     <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
-    <script src="people/js/people.js"></script>
-
 </head>
 
 <body>
     <!-- 第一页 -->
-    <iframe style="height: 102vh;width: 100vw; border: 0px;" scrolling="auto" src="./FirstPage/dist/FirstPage.html"></iframe>
+    <div id='FirstPage'>
+        <section id="beginning-section">
+          <video src="./FirstPage/dist/1.mp4" id='video' muted playsinline autoplay loop></video>
+          <h1>
+            Are You Ready To Know About PIXAR？
+          </h1>
+          <img src='./FirstPage/dist/textbg.png' id='text-bg'>
+          <img src='./FirstPage/dist/title.png' id='title'>
+        </section>
+      </div>
     <!-- 电影 -->
     <iframe style="height: 102vh;width: 100vw; border: 0px;" scrolling="no" src="./Film/film.html"></iframe>
     <!-- 人物 -->
     <iframe style="height: 102vh;width: 100vw; border: 0px;" scrolling="no" src="./people/people.html"></iframe>
     <!-- 获得奖项 -->
     <iframe style="height: 102vh;width: 100vw; border: 0px;" scrolling="no" src="./Popcorn/index.html"></iframe>
+    <script src="./FirstPage/dist/script.js"></script>
 
 </body>
 

@@ -1,96 +1,105 @@
-
 /* 添加字体 */
 
-@font-face{
-    font-family: 'peopleTitle';  
-    src: url("peopleTitle.TTF"); 
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-family: "peopleTitle";
+  src: url("peopleTitle.TTF");
+  font-weight: normal;
+  font-style: normal;
 }
-@font-face{
-    font-family: 'peopleFilm';  
-    src: url("peopleFilm.TTF"); 
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-family: "peopleFilm";
+  src: url("peopleFilm.TTF");
+  font-weight: normal;
+  font-style: normal;
 }
-@font-face{
-    font-family: 'peopleCa';  
-    src: url("peopleCa.TTF"); 
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-family: "peopleCa";
+  src: url("peopleCa.TTF");
+  font-weight: normal;
+  font-style: normal;
 }
-@font-face{
-    font-family: 'peopleIn';  
-    src: url("peopleIn.ttc"); 
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-family: "peopleIn";
+  src: url("peopleIn.ttc");
+  font-weight: normal;
+  font-style: normal;
 }
 /*缩紧两格 */
-p{
-    text-indent: 2em;
+p {
+  text-indent: 2em;
 }
 
-#peopleDiv{
-    height: 100vh;
-    background-color:whitesmoke;
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    justify-content: flex-start;
+#peopleDiv {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-#peopleTitle{
-    font-family: peopleTitle;
-    text-align: center;
-    font-size: 6vh;
+#peopleTitle {
+  font-family: peopleTitle;
+  text-align: center;
+  font-size: 10vh;
+  line-height: 12vh;
+  color: whitesmoke;
 }
 
-#peopleMain{
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+#peopleMain {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
-#q{
-    width: 25vw;
-    height: 40vh;
-    padding: 1vh;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#q {
+  width: 25vw;
+  height: 40vh;
+  padding: 1vh;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#peoplePic{
-    height: 30vh;
+#peoplePic {
+  height: 30vh;
 }
 
-#peopleDescribe{
-    display: none;
-    height: 70vh;
-    width: 80vw;
-    background-color: rgb(139, 138, 138);
-    position: fixed;
-    left: 10vw;
-    bottom: 13vh;
-    border-radius: 10px;
-    padding: 20px;
-    opacity: 96%;
+#peopleDescribe {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  backdrop-filter: blur(7px);
 }
 
-
-#peopleFilm{
-    text-align: center;
-    font-family: peopleFilm;
+#peopleFilm {
+  text-align: center;
+  font-family: peopleFilm;
+  color: whitesmoke;
 }
 
-#peopleCa{
-    text-align: center;
-    font-family: peopleCa;
+#peopleCa {
+  text-align: center;
+  font-family: peopleCa;
 }
 
-#peopleIn{
-    font-family: peopleIn;
+#peopleIn {
+  font-family: peopleIn;
+}
+.backDrop {
+  height: 70vh;
+  width: 80vw;
+  background-color: rgb(139, 138, 138);
+  position: fixed;
+  left: 10vw;
+  bottom: 13vh;
+  border-radius: 10px;
+  padding: 20px;
+  opacity: 96%;
 }
