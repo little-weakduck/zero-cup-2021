@@ -1,3 +1,8 @@
-body{
-    background-color: black;
+body {
+  background-color: black;
+}
+
+iframe::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
