@@ -22,7 +22,7 @@ body {
 
 #bottomImg {
   margin-left: 30vw;
-  bottom: 5px
+  bottom: 5px;
   position: fixed;
   width: 45vw;
   z-index: -100;

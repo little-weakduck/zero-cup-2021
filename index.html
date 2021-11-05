@@ -7,23 +7,31 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./FirstPage/dist/style.css">
     <script src="FirstPage/dist/jquery-3.6.0.js"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
     <img src="./team.png" id="team" alt="">
     <!-- 第一页 -->
-    <iframe name="FirstPage" style=" height: 100vh;width: 100vw;padding: 0;margin: 0;border: 0;" frameborder="0" src="./FirstPage/dist/FirstPage.html"></iframe>
+    <iframe id="first" name="FirstPage" style=" height: 100vh;width: 100vw;padding: 0;margin: 0;border: 0;" frameborder="0" src="./FirstPage/dist/FirstPage.html"></iframe>
     <!-- 历史 -->
-    <iframe style="height: 100vh;width: 100vw;" frameborder="0" src="./timeLine/timeline.html"></iframe>
+    <iframe id="history" style="height: 100vh;width: 100vw;" frameborder="0" src="./timeLine/timeline.html"></iframe>
     <!-- 电影 -->
-    <iframe style="height: 100vh;width: 100vw;" frameborder="0" scrolling="no" src="./Film/film.html"></iframe>
+    <iframe id="film" style="height: 100vh;width: 100vw;" frameborder="0" scrolling="no" src="./Film/film.html"></iframe>
     <!-- 人物 -->
-    <iframe style="height: 100vh;width: 100vw;" frameborder="0" scrolling="no" src="./people/people.html"></iframe>
+    <iframe id="people" style="height: 100vh;width: 100vw;" frameborder="0" scrolling="no" src="./people/people.html"></iframe>
     <!-- 获得奖项 -->
-    <iframe style="height: 100vh;width: 100vw;" frameborder="0" scrolling="no" src="./Popcorn/index.html"></iframe>
+    <iframe id="award" style="height: 100vh;width: 100vw;" frameborder="0" scrolling="no" src="./Popcorn/index.html"></iframe>
     <!-- 尾页 -->
-    <iframe style="height: 100vh;width: 100vw;" frameborder="0" src="./EndPage/EndPage.html"></iframe>
-
+    <iframe id="end" style="height: 100vh;width: 100vw;" frameborder="0" src="./EndPage/EndPage.html"></iframe>
+    <div id="pilot">
+        <div id="dot" onclick="javascript:jumpFrist()" ></div>
+        <div id="dot" onclick="javascript:jumpHistory()" ></div>
+        <div id="dot" onclick="javascript:jumpFilm()" ></div>
+        <div id="dot" onclick="javascript:jumpPeople()"></div>
+        <div id="dot" onclick="javascript:jumpAward()" ></div>
+        <div id="dot" onclick="javascript:jumpEnd()" ></div>
+    </div>
 </body>
 
 </html>
