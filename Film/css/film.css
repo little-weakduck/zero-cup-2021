@@ -35,8 +35,8 @@ body {
 
 @font-face {
   font-family: "film";
-  src: url("../css/filmtitle.ttf");
-  font-weight: normal;
+  src: url('PerfectMoment-Script.otf');
+  font-weight: lighter;
   font-style: normal;
 }
 
@@ -49,14 +49,13 @@ body {
 }
 #filmTitle {
   text-align: center;
-  padding-top: 5vh;
   font-family: "film";
   font-size: 13vh;
   color: whitesmoke;
   width: 100vw;
   text-shadow: 5px 5px rgb(156, 156, 156);
   position: relative;
-  top: 15px;
+
 }
 .mainboard-list {
   height: 90vh;

@@ -35,11 +35,10 @@ body {
 /* 添加字体 */
 @font-face {
   font-family: "peopleTitle";
-  src: url("peopleTitle.TTF");
-  font-weight: normal;
+  src: url('PerfectMoment-Script.otf');
+  font-weight: lighter;
   font-style: normal;
 }
-
 #peopleDiv {
   height: 80vh;
   width: 100vw;

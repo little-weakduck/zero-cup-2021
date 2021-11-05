@@ -1,3 +1,46 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(#7480c5, #7c89d4, rgb(161, 171, 238));
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100vw;
+  }
+  @font-face {
+    font-family: "h1";
+    src: url('PerfectMoment-Script.otf');
+    font-weight: lighter;
+    font-style: normal;
+}
+  h1{
+      font-family: h1;
+      font-size: 13vh;
+      position: fixed;
+      /* top: 50%; */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: whitesmoke;
+      text-shadow: 5px 5px rgb(156, 156, 156);
+  }
+
+#bottomImg {
+    margin-left: 30vw;
+    bottom: 5px;
+    position: fixed;
+    width: 45vw;
+    z-index: -100;
+    animation-name: show;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+#timeline{
+    position:absolute;
+    width:300vw;
+    height: 13vh;
+    top: 57vh;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -10,7 +53,7 @@
 }
 
 .display {
-    height: 70vh;
+    height: 45vh;
     display: grid;
     width: 300vw;
     grid-template-columns: repeat(18, 15vw);
@@ -23,6 +66,7 @@
     inset -10px -0px 30px rgba(0, 0, 0, 0.05),
     inset 0px 0px 30px rgba(255, 255, 255, 1);
     z-index: -1;
+    padding-top: 10vh;
 }
 
 .item {
@@ -35,9 +79,9 @@
     text-align: center;
 }
 .pictures {
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 21vh;
+    top: 10vh;
     column-count: 2;
     column-gap: 0;
 }
@@ -47,6 +91,7 @@
     padding: 0.3vw;
     height: 100%;
     overflow: auto;
+    position: relative;
 }
 
 .pictureboder {
@@ -73,14 +118,12 @@
 .informations {
     display: grid;
     width: 300vw;
-    margin-top: 0.5rem;
+    margin-top: 15vh;
     grid-template-columns: repeat(18, 15vw);
     grid-gap: 1.75vw;
     grid-row: 1;
     align-content: center;
     height: 24vh;
-    top:72vh;
-
 }
 .index {
     font-size: 15px;
