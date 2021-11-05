@@ -21,10 +21,10 @@ body {
 }
 
 #bottomImg {
-  margin-left: 20vw;
-  position: fixed;
+  margin-left: 30vw;
   bottom: 5px;
-  width: 60vw;
+  position: fixed;
+  width: 45vw;
   z-index: -100;
   animation-name: show;
   animation-duration: 2s;
