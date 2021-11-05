@@ -41,11 +41,13 @@ body {
 }
 
 #filmDiv {
-  height: 84vh;
+  height: 88vh;
   width: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  position: relative;
+  top:-5vh;
 }
 #filmTitle {
   text-align: center;
@@ -55,6 +57,7 @@ body {
   width: 100vw;
   text-shadow: 5px 5px rgb(156, 156, 156);
   position: relative;
+  top: 5vh;
 
 }
 .mainboard-list {
@@ -84,7 +87,7 @@ body {
   width: 30px;
   height: 30px;
   z-index: 1002;
-  left: 0px;
+  left: 10px;
 }
 .rightBtn {
   position: absolute;
@@ -93,7 +96,7 @@ body {
   width: 30px;
   height: 30px;
   z-index: 1002;
-  right: 0px;
+  right: 10px;
 }
 
 #film {
