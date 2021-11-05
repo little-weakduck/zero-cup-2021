@@ -34,7 +34,7 @@ iframe::-webkit-scrollbar {
   align-items: center;
   opacity: 80%;
 }
-#dot {
+.dot {
   width: 15px;
   height: 15px;
   border-radius: 100%;
