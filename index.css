@@ -10,8 +10,8 @@ iframe::-webkit-scrollbar {
 }
 
 #team {
-  filter: invert(100%);
-  opacity: 50%;
+  filter: invert(98%);
+  opacity: 15%;
   position: fixed;
   left: 50%;
   transform: translate(-50%, -50%);
