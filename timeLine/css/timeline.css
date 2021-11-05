@@ -1,26 +1,28 @@
-body {
-    text-align: center;
-    font-family: Helvetica;
-    font-size: 15px;
-    width: 250rem;
-}
-
 ::-webkit-scrollbar {
     display: none;
 }
+.icon {
+    width: 2em;
+    height: 2em;
+    vertical-align: -0.15em;
+    fill:gray;
+    overflow: hidden;
+}
 
 .display {
-    height: 72vh;
+    height: 70vh;
     display: grid;
-    width: 270rem;
+    width: 300vw;
     grid-template-columns: repeat(18, 15vw);
-    grid-gap: 1.5rem;
+    grid-gap: 1.75vw;
     grid-row: 1;
+    justify-content: center;
     border-bottom: 1px lightgray solid;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2),
     0px 0px 0px rgba(255, 255, 255, 0.8),
     inset -10px -0px 30px rgba(0, 0, 0, 0.05),
     inset 0px 0px 30px rgba(255, 255, 255, 1);
+    z-index: -1;
 }
 
 .item {
@@ -30,11 +32,12 @@ body {
 
 .year{
     color: dimgray;
+    text-align: center;
 }
 .pictures {
     position: absolute;
     width: 100%;
-    top: 30%;
+    top: 21vh;
     column-count: 2;
     column-gap: 0;
 }
@@ -60,27 +63,48 @@ body {
     display: block;
 }
 
-#blank{
+.blank{
     border:none;
     box-shadow: none;
     width: 80%;
+    height:3vh;
 }
 .informations {
     display: grid;
-    width: 270rem;
+    width: 300vw;
+    margin-top: 0.5rem;
     grid-template-columns: repeat(18, 15vw);
-    grid-gap: 1.5rem;
+    grid-gap: 1.75vw;
     grid-row: 1;
+    align-content: center;
     height: 24vh;
-    top:74vh;
+    top:72vh;
 
 }
 .index {
-
+    font-size: 15px;
     color: dimgray;
-    padding: 0.5rem;
-    margin: auto 0;
+    padding: 0.3rem;
+    height: 18vh;
+    text-align: center;
     box-shadow: 10px 10px 20px rgba(0,0,0,0.1),
     -10px -10px 25px rgba(255,255,255,1);
     border-radius: 0.5rem;
+}
+.scroll{
+    z-index: 1;
+    position:fixed;
+    top:55vh;
+    height: 6vh;
+    width: 1.5vw;
+    border: none;
+    background-color:transparent;
+}
+
+#right{
+    left:97vw;
+}
+
+#left{
+    left: 1vw;
 }
