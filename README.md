@@ -6,7 +6,9 @@
 3. Characters：在这里我们以类似舞台的形式展示了六个Pixar动画电影中家喻户晓的角色，点击会播放角色的经典台词和展示角色的细节信息。
 4. Prizes：我们用类似镜头快门打开关闭的方式展示Pixar的一些电影获得的奖项。
    
-##二、项目目录及说明
+
+## 二、项目目录及说明
+
 ```txt
 .
 ├── FirstPage
@@ -74,7 +76,8 @@
 └── README.pdf //说明文档pdf版本
 ```
 
-##三、功能设计
+## 三、功能设计
+
 在本项目中，我们全部采用的是前端的相关技术。在完成此次项目中，我们首先讨论了网页的主题和主要内容，并构思了各个页面的主要呈现方式，构建设计思路，在此基础上分工编写各个页面的html，css和JavaScript的代码。除引用了``jQuery``库协助开发外，主页面没有使用任何第三方辅助工具和其他库。同时为了方便队内及时沟通和整理已有成果，我们也学习并使用了``git``和``github``，及时更新项目进度。在整合网页时，我们使用``iframe``嵌套不同的页面。同时我们也按照开发规范对命名、格式等做了严格要求，代码可读性高。
 
 在首页中，我们首先通过渐入"Are you ready to know about Pixar?"做了一个引入，使访问者对接下来我们将要展示的内容有一定的了解。为了使一些看过甚至熟知Pixar动画的访问者获得一些熟悉感和亲近感，以及使一些没有接触过Pixar动画的访问者对我们的网页产生一定兴趣，在接下来的部分我们采用了一段Pixar经典的开场动画来过渡到正式的开场部分，同时这也是我们对Pixar的制作者的一种致敬。继续下滑，我们通过计算变量`scrolled`,使滑动过程有一个标题从大到小渐入，视频逐渐淡出，最后将标题呈现出来的动画，让标题的出现更为自然流畅也不会死板。
@@ -89,9 +92,36 @@
 
 在尾页中，我们通过``animation``实现了语句的浮动渐入效果，对整体网页做了一个收尾和总结。
 
-##四、部分界面的展示图片
+## 四、部分界面的展示图片
 
-##五、bug永远改不队成员及分工
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/1.png)
+
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/2.png)
+
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/3.png)
+
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/4.png)
+
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/5.png)
+
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/6.png)
+
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/7.png)
+
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/7.png)
+
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/8.png)
+
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/9.png)
+
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/10.png)
+
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/11.png)
+
+![](https://raw.githubusercontent.com/little-weakduck/Picture/main/img/12.png)
+
+## 五、bug永远改不队成员及分工
+
 罗逸宸：队长，主要负责电影页和任务页的部分。
 戴承骥：队员，主要负责奖项页的部分。
 廉厶铭：队员，主要负责历史页的部分。
