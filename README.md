@@ -66,7 +66,7 @@
 │   ├── css //尾页样式文件
 │   │   ├── EndPage.css
 │   │   └── fifawelcome1.3.ttf
-│   └── js //首页js文件
+│   └── js //尾页js文件
 │       └── EndPage.js
 ├── index.html //主页入口
 ├── index.css //主页样式文件
