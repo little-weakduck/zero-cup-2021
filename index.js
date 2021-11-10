@@ -1,28 +1,8 @@
-function jumpHistory() {
-  window.location.hash = "#history";
-}
-
-function jumpFrist() {
-  window.location.hash = "#first";
-}
-
-function jumpFilm() {
-  window.location.hash = "#film";
-}
-
-function jumpPeople() {
-  window.location.hash = "#people";
-}
-
-function jumpAward() {
-  window.location.hash = "#award";
-}
-
-function jumpEnd() {
-  window.location.hash = "#end";
-}
-
 var h = window.innerHeight;
+
+function jump(a) {
+  $("html, body").scrollTop(a * h * 1.01);
+}
 
 function pilot() {
   if ($("html, body").scrollTop() < 0.5 * h) {
