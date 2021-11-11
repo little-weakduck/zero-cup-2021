@@ -1,5 +1,5 @@
 var h;
-
+var a, b, c, d, e;
 //跳转函数
 function jump(a) {
   h = $(window).height();
@@ -82,6 +82,17 @@ function animation() {
 
     end.style.opacity =
       (($("html, body").scrollTop() - (4 * h + 24)) / h) * 100 + "%";
+    a = ($("html, body").scrollTop() - (4 * h + 24)) / h + 0.3;
+    if (1.6 - a < 1) {
+      award.style.transform = "scale(" + (1.6 - a) + ")";
+    } else {
+      award.style.transform = "scale(1)";
+    }
+    if (a < 1) {
+      end.style.transform = "scale(" + a + ")";
+    } else {
+      end.style.transform = "scale(1)";
+    }
   } else {
     if ($("html, body").scrollTop() > 3 * h + 18) {
       people.style.opacity =
