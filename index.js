@@ -74,6 +74,7 @@ $(window).scroll(function () {
 //初始化
 window.onload = pilot();
 
+//渐变渐显
 function animation() {
   if ($("html, body").scrollTop() > 4 * h + 24) {
     award.style.opacity =
