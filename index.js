@@ -83,11 +83,6 @@ function animation() {
     end.style.opacity =
       (($("html, body").scrollTop() - (4 * h + 24)) / h) * 100 + "%";
     a = ($("html, body").scrollTop() - (4 * h + 24)) / h + 0.3;
-    if (1.6 - a < 1) {
-      award.style.transform = "scale(" + (1.6 - a) + ")";
-    } else {
-      award.style.transform = "scale(1)";
-    }
     if (a < 1) {
       end.style.transform = "scale(" + a + ")";
     } else {
