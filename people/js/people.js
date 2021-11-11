@@ -27,42 +27,42 @@ function playIncredibles() {
 //显示人物介绍
 $(document).ready(function () {
   $(".toy").click(function () {
-    $(".toyDe").show("slow");
+    $(".toyDe").fadeIn("slow");
   });
 });
 $(document).ready(function () {
   $(".monster").click(function () {
-    $(".monsterDe").show("slow");
+    $(".monsterDe").fadeIn("slow");
   });
 });
 $(document).ready(function () {
   $(".sea").click(function () {
-    $(".seaDe").show("slow");
+    $(".seaDe").fadeIn("slow");
   });
 });
 $(document).ready(function () {
   $(".car").click(function () {
-    $(".carDe").show("slow");
+    $(".carDe").fadeIn("slow");
   });
 });
 $(document).ready(function () {
   $(".coco").click(function () {
-    $(".cocoDe").show("slow");
+    $(".cocoDe").fadeIn("slow");
   });
 });
 $(document).ready(function () {
   $(".Incredibles").click(function () {
-    $(".IncrediblesDe").show("slow");
+    $(".IncrediblesDe").fadeIn("slow");
   });
 });
 //隐藏人物介绍
 $(document).ready(function () {
   $(".peopleClose").click(function () {
-    $(".toyDe").hide("slow");
-    $(".monsterDe").hide("slow");
-    $(".seaDe").hide("slow");
-    $(".carDe").hide("slow");
-    $(".cocoDe").hide("slow");
-    $(".IncrediblesDe").hide("slow");
+    $(".toyDe").fadeOut("slow");
+    $(".monsterDe").fadeOut("slow");
+    $(".seaDe").fadeOut("slow");
+    $(".carDe").fadeOut("slow");
+    $(".cocoDe").fadeOut("slow");
+    $(".IncrediblesDe").fadeOut("slow");
   });
 });
