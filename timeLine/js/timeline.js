@@ -1,13 +1,9 @@
-const width = $(window).width();
+const width = ($(window).width() / 6) * 5;
 $(document).ready(function () {
-    let currentscroll = 0;
-    $('#right').click(function () {
-        currentscroll = currentscroll + width;
-        $(window).scrollLeft(currentscroll);
-
-    });
-    $('#left').click(function () {
-        currentscroll = currentscroll - width;
-        $(window).scrollLeft(currentscroll);
-    });
+  $("#right").click(function () {
+    $(window).scrollLeft($(window).scrollLeft() + width);
+  });
+  $("#left").click(function () {
+    $(window).scrollLeft($(window).scrollLeft() - width);
+  });
 });

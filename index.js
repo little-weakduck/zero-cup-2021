@@ -1,5 +1,5 @@
 var h;
-var a, b, c, d, e;
+var a;
 //跳转函数
 function jump(a) {
   h = $(window).height();
